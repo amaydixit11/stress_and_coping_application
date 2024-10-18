@@ -1,9 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../core/app_export.dart';
 
 enum BottomBarEnum { Chatroom, Relax, Resources, Profile }
 
-// ignore_for_file: must_be_immutable
 class CustomBottomBar extends StatefulWidget {
   final Function(BottomBarEnum)? onChanged;
 
@@ -13,32 +13,37 @@ class CustomBottomBar extends StatefulWidget {
   CustomBottomBarState createState() => CustomBottomBarState();
 }
 
-// ignore_for_file: must_be_immutable
 class CustomBottomBarState extends State<CustomBottomBar> {
   int selectedIndex = 0;
 
   List<BottomMenuModel> bottomMenuList = [
     BottomMenuModel(
-      icon: ImageConstant.imgNavChatroomBlueGray100,
-      activeIcon: ImageConstant.imgNavChatroomBlueGray100,
+      icon: Icons.home,
+      activeIcon: Icons.home,
+      title: "Home",
+      type: BottomBarEnum.Chatroom,
+    ),
+    BottomMenuModel(
+      icon: Icons.message_rounded,
+      activeIcon: Icons.message_rounded,
       title: "Chatroom",
       type: BottomBarEnum.Chatroom,
     ),
     BottomMenuModel(
-      icon: ImageConstant.imgNavChatroomBlueGray100,
-      activeIcon: ImageConstant.imgNavChatroomBlueGray100,
+      icon: CupertinoIcons.game_controller_solid,
+      activeIcon: CupertinoIcons.game_controller_solid,
       title: "Relax",
       type: BottomBarEnum.Relax,
     ),
     BottomMenuModel(
-      icon: ImageConstant.imgNavResources,
-      activeIcon: ImageConstant.imgNavResources,
+      icon: Icons.menu_book_rounded,
+      activeIcon: Icons.menu_book_rounded,
       title: "Resources",
       type: BottomBarEnum.Resources,
     ),
     BottomMenuModel(
-      icon: ImageConstant.imgNavProfile,
-      activeIcon: ImageConstant.imgNavProfile,
+      icon: Icons.person,
+      activeIcon: Icons.person,
       title: "Profile",
       type: BottomBarEnum.Profile,
     ),
@@ -46,85 +51,61 @@ class CustomBottomBarState extends State<CustomBottomBar> {
 
   @override
   Widget build(BuildContext context) {
-    var theme = Theme.of(context);
-
-    return BottomNavigationBar(
-      backgroundColor: Colors.transparent,
-      showSelectedLabels: false,
-      showUnselectedLabels: false,
-      selectedFontSize: 0,
-      elevation: 0,
-      currentIndex: selectedIndex,
-      type: BottomNavigationBarType.fixed,
-      items: List.generate(bottomMenuList.length, (index) {
-        return BottomNavigationBarItem(
-          icon: Container(
-            width: 76.h,
-            padding: EdgeInsets.symmetric(horizontal: 20.h, vertical: 14.h),
-            decoration: BoxDecoration(
-              color: theme.colorScheme.onPrimaryContainer,
-            ),
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                CustomImageView(
-                  imagePath: bottomMenuList[index].icon,
-                  height: 24.h,
-                  width: double.maxFinite,
+    return Container(
+      decoration: BoxDecoration(
+        color: appTheme.gray90004,
+      ),
+      child: BottomNavigationBar(
+        backgroundColor: Colors.transparent,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        elevation: 0,
+        currentIndex: selectedIndex,
+        type: BottomNavigationBarType.fixed,
+        items: bottomMenuList.map((menu) {
+          return BottomNavigationBarItem(
+            icon: Container(
+              decoration: BoxDecoration(
+                color: selectedIndex == bottomMenuList.indexOf(menu)
+                    ? Color(0xFFB5F2FF)
+                    : Colors.transparent,
+              ),
+              padding: const EdgeInsets.all(6.0),
+              child: Icon(menu.icon,
                   color: const Color(0XFFD9D9D9),
-                ),
-                SizedBox(height: 8.h),
-                Text(
-                  bottomMenuList[index].title ?? "",
-                  style: theme.textTheme.labelLarge!.copyWith(
-                    color: const Color(0XFFFFFFFF),
-                  ),
-                ),
-              ],
+                  size: 30), // Set the size here
             ),
-          ),
-          activeIcon: Container(
-            width: 90.h,
-            padding: EdgeInsets.symmetric(horizontal: 8.h, vertical: 14.h),
-            decoration: BoxDecoration(
-              color: theme.colorScheme.onPrimaryContainer,
+            activeIcon: Container(
+              decoration: BoxDecoration(
+                color: Color(0xFFB5F2FF),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              padding: const EdgeInsets.all(6.0),
+              child: Icon(
+                menu.activeIcon,
+                color: selectedIndex == bottomMenuList.indexOf(menu)
+                    ? appTheme.gray90004
+                    : Colors.white,
+                size: 30, // Set the size here
+              ),
             ),
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                CustomImageView(
-                  imagePath: bottomMenuList[index].activeIcon,
-                  height: 24.h,
-                  width: 26.h,
-                  color: const Color(0XFFD9D9D9),
-                ),
-                SizedBox(height: 8.h),
-                Text(
-                  bottomMenuList[index].title ?? "",
-                  style: theme.textTheme.labelLarge!.copyWith(
-                    color: const Color(0XFFFFFFFF),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          label: '',
-        );
-      }),
-      onTap: (index) {
-        selectedIndex = index;
-        widget.onChanged?.call(bottomMenuList[index].type);
-        setState(() {});
-      },
+            label: menu.title,
+          );
+        }).toList(),
+        onTap: (index) {
+          setState(() {
+            selectedIndex = index;
+          });
+          widget.onChanged?.call(bottomMenuList[index].type);
+        },
+      ),
     );
   }
 }
 
 class BottomMenuModel {
-  final String icon;
-  final String activeIcon;
+  final IconData icon;
+  final IconData activeIcon;
   final String? title;
   final BottomBarEnum type;
 
@@ -134,28 +115,4 @@ class BottomMenuModel {
     this.title,
     required this.type,
   });
-}
-
-class DefaultWidget extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: const Color(0xffffffff),
-      padding: const EdgeInsets.all(10),
-      child: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Please replace the respective Widget here',
-              style: const TextStyle(
-                fontSize: 18,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 }
