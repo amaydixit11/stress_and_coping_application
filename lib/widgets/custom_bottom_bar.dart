@@ -48,79 +48,76 @@ class CustomBottomBarState extends State<CustomBottomBar> {
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
 
-    return SizedBox(
-      height: 78.h,
-      child: BottomNavigationBar(
-        backgroundColor: Colors.transparent,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        selectedFontSize: 0,
-        elevation: 0,
-        currentIndex: selectedIndex,
-        type: BottomNavigationBarType.fixed,
-        items: List.generate(bottomMenuList.length, (index) {
-          return BottomNavigationBarItem(
-            icon: Container(
-              width: 76.h,
-              padding: EdgeInsets.symmetric(horizontal: 20.h, vertical: 14.h),
-              decoration: BoxDecoration(
-                color: theme.colorScheme.onPrimaryContainer,
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  CustomImageView(
-                    imagePath: bottomMenuList[index].icon,
-                    height: 24.h,
-                    width: double.maxFinite,
-                    color: const Color(0XFFD9D9D9),
-                  ),
-                  SizedBox(height: 8.h),
-                  Text(
-                    bottomMenuList[index].title ?? "",
-                    style: theme.textTheme.labelLarge!.copyWith(
-                      color: const Color(0XFFFFFFFF),
-                    ),
-                  ),
-                ],
-              ),
+    return BottomNavigationBar(
+      backgroundColor: Colors.transparent,
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
+      selectedFontSize: 0,
+      elevation: 0,
+      currentIndex: selectedIndex,
+      type: BottomNavigationBarType.fixed,
+      items: List.generate(bottomMenuList.length, (index) {
+        return BottomNavigationBarItem(
+          icon: Container(
+            width: 76.h,
+            padding: EdgeInsets.symmetric(horizontal: 20.h, vertical: 14.h),
+            decoration: BoxDecoration(
+              color: theme.colorScheme.onPrimaryContainer,
             ),
-            activeIcon: Container(
-              width: 90.h,
-              padding: EdgeInsets.symmetric(horizontal: 8.h, vertical: 14.h),
-              decoration: BoxDecoration(
-                color: theme.colorScheme.onPrimaryContainer,
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  CustomImageView(
-                    imagePath: bottomMenuList[index].activeIcon,
-                    height: 24.h,
-                    width: 26.h,
-                    color: const Color(0XFFD9D9D9),
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                CustomImageView(
+                  imagePath: bottomMenuList[index].icon,
+                  height: 24.h,
+                  width: double.maxFinite,
+                  color: const Color(0XFFD9D9D9),
+                ),
+                SizedBox(height: 8.h),
+                Text(
+                  bottomMenuList[index].title ?? "",
+                  style: theme.textTheme.labelLarge!.copyWith(
+                    color: const Color(0XFFFFFFFF),
                   ),
-                  SizedBox(height: 8.h),
-                  Text(
-                    bottomMenuList[index].title ?? "",
-                    style: theme.textTheme.labelLarge!.copyWith(
-                      color: const Color(0XFFFFFFFF),
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
-            label: '',
-          );
-        }),
-        onTap: (index) {
-          selectedIndex = index;
-          widget.onChanged?.call(bottomMenuList[index].type);
-          setState(() {});
-        },
-      ),
+          ),
+          activeIcon: Container(
+            width: 90.h,
+            padding: EdgeInsets.symmetric(horizontal: 8.h, vertical: 14.h),
+            decoration: BoxDecoration(
+              color: theme.colorScheme.onPrimaryContainer,
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                CustomImageView(
+                  imagePath: bottomMenuList[index].activeIcon,
+                  height: 24.h,
+                  width: 26.h,
+                  color: const Color(0XFFD9D9D9),
+                ),
+                SizedBox(height: 8.h),
+                Text(
+                  bottomMenuList[index].title ?? "",
+                  style: theme.textTheme.labelLarge!.copyWith(
+                    color: const Color(0XFFFFFFFF),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          label: '',
+        );
+      }),
+      onTap: (index) {
+        selectedIndex = index;
+        widget.onChanged?.call(bottomMenuList[index].type);
+        setState(() {});
+      },
     );
   }
 }
