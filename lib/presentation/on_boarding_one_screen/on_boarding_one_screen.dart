@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stress_and_coping_application/presentation/on_boarding_one_screen/widgets/circles_painter_widget.dart';
+import 'package:stress_and_coping_application/presentation/sign_in_screen/sign_in_screen.dart';
 import '../../core/app_export.dart';
 
 class OnBoardingOneScreen extends StatefulWidget {
@@ -12,12 +13,16 @@ class OnBoardingOneScreen extends StatefulWidget {
 class _OnBoardingOneScreenState extends State<OnBoardingOneScreen> {
   String _displayText = "Welcome";
   String _displayImage = ImageConstant.imgImage;
+  String _displayNext = "Next";
 
   void _changeScreen() {
     setState(() {
       _displayText = _displayText == "Welcome"
           ? "Are You Ready to Start your journey of Mental Health?"
           : "Welcome";
+    });
+    setState(() {
+      _displayNext = _displayNext == "Next" ? "Proceed" : "Next";
     });
     setState(() {
       _displayImage = _displayImage == ImageConstant.imgImage
@@ -56,8 +61,8 @@ class _OnBoardingOneScreenState extends State<OnBoardingOneScreen> {
   Widget _buildTopLeftImage(double screenHeight) {
     return CustomImageView(
       imagePath: ImageConstant.imgEllipse179,
-      height: screenHeight * 0.46,
-      width: screenHeight * 0.18,
+      height: screenHeight,
+      width: screenHeight,
       alignment: Alignment.topLeft,
     );
   }
@@ -121,17 +126,32 @@ class _OnBoardingOneScreenState extends State<OnBoardingOneScreen> {
       padding: EdgeInsets.symmetric(horizontal: 14.h),
       child: Column(
         children: [
-          Text(
-            // "Are You Ready to Start your journey of Mental Health?",
-            // "Welcome",
-            _displayText,
-            maxLines: 3,
-            overflow: TextOverflow.ellipsis,
-            textAlign: TextAlign.center,
-            style: theme.textTheme.headlineLarge!.copyWith(
-              height: 1.30,
+          // Text(
+          //   // "Are You Ready to Start your journey of Mental Health?",
+          //   // "Welcome",
+          //   _displayText,
+          //   maxLines: 3,
+          //   overflow: TextOverflow.ellipsis,
+          //   textAlign: TextAlign.center,
+          //   style: theme.textTheme.headlineLarge!.copyWith(
+          //     height: 1.30,
+          //   ),
+          // ),
+          AnimatedSwitcher(
+            duration: Duration(milliseconds: 500),
+            transitionBuilder: (Widget child, Animation<double> animation) {
+              return FadeTransition(opacity: animation, child: child);
+            },
+            child: Text(
+              _displayText,
+              key: ValueKey<String>(
+                  _displayText), // Ensure uniqueness of each text
+              maxLines: 3,
+              overflow: TextOverflow.ellipsis,
+              textAlign: TextAlign.center,
+              style: theme.textTheme.headlineLarge!.copyWith(height: 1.30),
             ),
-          ),
+          )
         ],
       ),
     );
@@ -165,24 +185,48 @@ class _OnBoardingOneScreenState extends State<OnBoardingOneScreen> {
   }
 
   Widget _buildNextSection(double screenHeight) {
-    void _onTap() {
+    void _onNext() {
       _changeScreen();
+    }
+
+    void _onProceed() {
+      // Navigate to the next screen
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => SignInScreen()),
+      );
     }
 
     return Column(
       children: [
-        CustomImageView(
-          imagePath: _displayImage,
-          height: screenHeight * 0.30,
-          width: double.infinity,
-          radius: BorderRadius.circular(screenHeight * 0.075),
-          fit: BoxFit.contain, // Ensure the whole image is visible
+        // CustomImageView(
+        //   imagePath: _displayImage,
+        //   height: screenHeight * 0.30,
+        //   width: double.infinity,
+        //   radius: BorderRadius.circular(screenHeight * 0.075),
+        //   fit: BoxFit.contain, // Ensure the whole image is visible
+        // ),
+        AnimatedSwitcher(
+          duration: Duration(milliseconds: 500),
+          transitionBuilder: (Widget child, Animation<double> animation) {
+            return FadeTransition(opacity: animation, child: child);
+          },
+          child: CustomImageView(
+            key: ValueKey<String>(
+                _displayImage), // Ensure uniqueness of each image
+            imagePath: _displayImage,
+            height: screenHeight * 0.30,
+            width: double.infinity,
+            radius: BorderRadius.circular(screenHeight * 0.075),
+            fit: BoxFit.contain,
+          ),
         ),
+
         SizedBox(height: screenHeight * 0.015),
         GestureDetector(
-          onTap: _onTap, // Tap handler
+          onTap: _displayNext == "Next" ? _onNext : _onProceed, // Tap handler
           child: Text(
-            "Next",
+            _displayNext,
             style: theme.textTheme.headlineLarge,
           ),
         ),
@@ -198,10 +242,15 @@ class _OnBoardingOneScreenState extends State<OnBoardingOneScreen> {
   }
 
   Widget Circles(double screenHeight) {
+    // Adjust the circle size relative to the screenHeight
+    final double width = screenHeight * 0.05; // Example: 10% of screenHeight
+    final double height = screenHeight * 0.015; // Example: 3% of screenHeight
+
     return Container(
-      width: 42, // Same width as in the SVG
-      height: 13, // Same height as in the SVG
+      width: width, // Dynamic width
+      height: height, // Dynamic height
       child: CustomPaint(
+        size: Size(width, height),
         painter: CirclesPainter(),
       ),
     );

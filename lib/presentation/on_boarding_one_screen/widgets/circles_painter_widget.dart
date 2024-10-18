@@ -7,22 +7,29 @@ class CirclesPainter extends CustomPainter {
       ..style = PaintingStyle.fill
       ..color = Colors.white;
 
-    // Draw the first circle (filled white with white stroke)
+    double circle1Radius = size.height * 0.5;
+    double circle2Radius = size.height * 0.45;
+
+    double circle1CenterX = size.width * 0.15;
+    double circle2CenterX = size.width * 0.85;
+
+    double circleCenterY = size.height * 0.5;
+
     canvas.drawCircle(
-      Offset(6.5, 6.5), // Center of the first circle
-      6, // Radius of the first circle
-      paint, // Filled with white color
+      Offset(circle1CenterX, circleCenterY),
+      circle1Radius,
+      paint,
     );
-    // Draw the second circle (white stroke, no fill)
+
     final strokePaint = Paint()
       ..style = PaintingStyle.stroke
       ..strokeWidth = 2
       ..color = Colors.white;
 
     canvas.drawCircle(
-      Offset(35.5, 6.5), // Center of the second circle
-      5.5, // Radius of the second circle
-      strokePaint, // Only stroke with white color
+      Offset(circle2CenterX, circleCenterY),
+      circle2Radius,
+      strokePaint,
     );
   }
 

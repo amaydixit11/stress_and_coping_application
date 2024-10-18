@@ -227,9 +227,9 @@ class LightCodeColors {
   Color get redA70001 => Color(0XFFFD0C0C);
   // Teal
   Color get teal300 => Color(0XFF4C9AAF);
-  Color get tea130001 => Color(0XFF4A97AC);
+  Color get teal30001 => Color(0XFF4A97AC);
   Color get teal500 => Color(0XFF039C86);
-  Color get tea1900 => Color(0XFF013259);
+  Color get teal900 => Color(0XFF013259);
   // White
   Color get whiteA700 => Color(0XFFFFFFFE);
   // Yellow

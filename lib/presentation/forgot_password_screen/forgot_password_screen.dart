@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:stress_and_coping_application/presentation/sign_in_screen/sign_in_screen.dart';
+import 'package:stress_and_coping_application/presentation/reset_password_screen/reset_password_screen.dart';
 import '../../core/app_export.dart';
-import '../../domain/googleauth/google_auth_helper.dart';
-import '../../theme/custom_button_style.dart';
 import '../../widgets/custom_elevated_button.dart';
 import '../../widgets/custom_text_form_field.dart';
 
-class ResetPasswordScreen extends StatelessWidget {
-  ResetPasswordScreen({Key? key}) : super(key: key);
+class ForgotPasswordScreen extends StatelessWidget {
+  ForgotPasswordScreen({Key? key}) : super(key: key);
 
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordInputController = TextEditingController();
@@ -79,23 +77,23 @@ class ResetPasswordScreen extends StatelessWidget {
           _buildImageSection(context),
           SizedBox(height: MediaQuery.of(context).size.height * 0.02),
           Text(
-            "Reset",
+            "Forgot",
             style: theme.textTheme.displayMedium?.copyWith(
               fontSize: MediaQuery.of(context).size.width * 0.1,
             ),
           ),
           Text(
-            "Password",
+            "Password?",
             style: theme.textTheme.displayMedium?.copyWith(
               fontSize: MediaQuery.of(context).size.width * 0.1,
             ),
           ),
-          // SizedBox(height: MediaQuery.of(context).size.height * 0.04),
-          // _buildSubText(context),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+          _buildSubText(context),
           SizedBox(height: MediaQuery.of(context).size.height * 0.03),
           _buildContactInfoRow(context),
-          SizedBox(height: MediaQuery.of(context).size.height * 0.08),
-          _buildChangePasswordButton(context),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+          _buildSubmitButton(context),
         ],
       ),
     );
@@ -114,7 +112,7 @@ class ResetPasswordScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           CustomImageView(
-            imagePath: ImageConstant.imgResetPasswordGroup,
+            imagePath: ImageConstant.imgForgotPasswordGroup,
             height: screenHeight * 0.3,
             width: screenWidth * 0.9,
             margin: EdgeInsets.only(left: screenWidth * 0.02),
@@ -134,8 +132,7 @@ class ResetPasswordScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _buildTextField(context, "New Password"),
-          _buildTextField(context, "Confirm Password"),
+          _buildTextField(context, "Email or Mobile"),
         ],
       ),
     );
@@ -183,11 +180,11 @@ class ResetPasswordScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildChangePasswordButton(BuildContext context) {
+  Widget _buildSubmitButton(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
 
     return CustomElevatedButton(
-      text: "Change Password",
+      text: "Submit",
       margin: EdgeInsets.symmetric(horizontal: screenWidth * 0.01),
       buttonTextStyle: CustomTextStyles.bodyLargeBlack90001?.copyWith(
         fontSize: screenWidth * 0.045,
@@ -199,7 +196,14 @@ class ResetPasswordScreen extends StatelessWidget {
       ),
       width: screenWidth * 0.9,
       height: screenWidth * 0.12,
-      onPressed: () {},
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ResetPasswordScreen(),
+          ),
+        );
+      },
     );
   }
 }

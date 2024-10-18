@@ -12,9 +12,14 @@ class ImageConstant {
   static String imgGoogle = '$imagePath/img_google.svg';
   static String imgFacebook = '$imagePath/img_facebook.svg';
 // Sign Up images
-  static String imgGroup371 = '$imagePath/img_group_371.svg';
+  // static String imgGroup371 = '$imagePath/img_group_371.svg';
+  static String imgSignUpGroup = '$imagePath/img_signup_group.svg';
+// Forgot Password images
+  static String imgForgotPasswordGroup =
+      '$imagePath/img_forgot_password_group.svg';
 // Reset Password images
-  static String imgGroup369 = '$imagePath/img_group_369.svg';
+  static String imgResetPasswordGroup =
+      '$imagePath/img_reset_password_group.svg';
 // ChatRoom images
   static String imgFrame3293 = '$imagePath/img_frame_3293.png';
   static String imgIcon = '$imagePath/img_icon.svg';
@@ -28,8 +33,9 @@ class ImageConstant {
   static String imgLine1 = '$imagePath/img_line_1.png';
   static String imgLock = '$imagePath/img_lock.svg';
 // Home images
-  static String imgGroup75 = '$imagePath/img_group_75.png';
+  static String imgHomeBG = '$imagePath/img_home_bg.png';
   static String imgSubtract = '$imagePath/img_subtract.svg';
+  static String imgEpisodeBackground = '$imagePath/img_episode_background.png';
   static String imgSettingsLightBlue100 =
       '$imagePath/img_settings_light_blue_100.svg';
   static String imgSettingsLightBlue10050x50 =

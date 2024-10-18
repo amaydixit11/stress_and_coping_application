@@ -8,7 +8,7 @@ import '../presentation/on_boarding_one_screen/on_boarding_one_screen.dart';
 // import '../presentation/practical_guides_screen/practical_guides_screen.dart';
 import '../presentation/profile_screen/profile_screen.dart';
 import '../presentation/relax_screen/relax_screen.dart';
-import '../presentation/reset_password_screen/reset_password_screen.dart';
+import '../presentation/forgot_password_screen/forgot_password_screen.dart';
 import '../presentation/sign_in_screen/sign_in_screen.dart';
 import '../presentation/sign_up_screen/sign_up_screen.dart';
 

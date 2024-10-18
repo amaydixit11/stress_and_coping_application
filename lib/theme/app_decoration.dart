@@ -49,7 +49,7 @@ class AppDecoration {
       );
 
   static BoxDecoration get fillTeal => BoxDecoration(
-        color: appTheme.tea1900,
+        color: appTheme.teal900,
       );
 
   // Neutral decorations
