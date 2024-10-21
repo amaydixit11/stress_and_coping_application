@@ -42,7 +42,7 @@ class AppRoutes {
     // relaxScreen: (context) => RelaxScreen(),
     // educationalContentScreen: (context) => EducationalContentScreen(),
     // practicalGuidesScreen: (context) => PracticalGuidesScreen(),
-    appNavigationScreen: (context) => AppNavigationScreen(),
+    // appNavigationScreen: (context) => AppNavigationScreen(),
     initialRoute: (context) => OnBoardingOneScreen(),
   };
 }

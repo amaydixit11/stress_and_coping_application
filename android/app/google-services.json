@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "228340934484",
+    "project_id": "stress-and-coping-application",
+    "storage_bucket": "stress-and-coping-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:228340934484:android:44658e024625bba0594ac1",
+        "android_client_info": {
+          "package_name": "com.example.stress_and_coping_application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "228340934484-7i04pr94bcfuqv0hgni0f6oju7snnm2j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBo-ykwUYACOmvdcfpbChtRkxTVgD609Es"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "228340934484-7i04pr94bcfuqv0hgni0f6oju7snnm2j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

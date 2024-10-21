@@ -44,6 +44,11 @@ class ImageConstant {
   static String imgSettings1 = '$imagePath/img_settings_1.svg';
   static String imgSettings2 = '$imagePath/img_settings_2.svg';
   static String imgVector = '$imagePath/img_vector.svg';
+  static String imgHomeQuizQuestionMark =
+      '$imagePath/img_home_quiz_question_mark.svg';
+  static String imgHomeQuizQuestionMarkGroup =
+      '$imagePath/img_home_quiz_question_mark_group.svg';
+
   static String imgHomeBlack90001 = '$imagePath/img_home_black_900_01.svg';
 
 // Relax images

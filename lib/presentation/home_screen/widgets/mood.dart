@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:stress_and_coping_application/domain/mood/mood_provider.dart';
 
 class MoodSelect extends StatefulWidget {
-  const MoodSelect({super.key});
+  final String userID;
+
+  const MoodSelect({
+    super.key,
+    required this.userID,
+  });
 
   @override
   State<MoodSelect> createState() => _MoodSelectState();
@@ -14,7 +20,13 @@ class _MoodSelectState extends State<MoodSelect> {
     var screenHeight = screenSize.height;
     var screenWidth = screenSize.width;
 
-    void _onTap(num number) {}
+    void _onTap(int index) async {
+      MoodProvider moodProvider = MoodProvider();
+      await moodProvider.saveMood(
+        widget.userID,
+        index,
+      ); // Save the mood with userID
+    }
 
     return Container(
       width: double.infinity,

@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:stress_and_coping_application/presentation/home_screen/home_screen.dart';
+import 'package:stress_and_coping_application/presentation/relax_screen/relax_screen.dart';
 import '../core/app_export.dart';
 
-enum BottomBarEnum { Chatroom, Relax, Resources, Profile }
+enum BottomBarEnum { Chatroom, Relax, Resources, Profile, Home }
 
 class CustomBottomBar extends StatefulWidget {
   final Function(BottomBarEnum)? onChanged;
@@ -21,7 +23,7 @@ class CustomBottomBarState extends State<CustomBottomBar> {
       icon: Icons.home,
       activeIcon: Icons.home,
       title: "Home",
-      type: BottomBarEnum.Chatroom,
+      type: BottomBarEnum.Home,
     ),
     BottomMenuModel(
       icon: Icons.message_rounded,
@@ -49,9 +51,44 @@ class CustomBottomBarState extends State<CustomBottomBar> {
     ),
   ];
 
+  void _onItemTapped(int index) {
+    setState(() {
+      selectedIndex = index;
+    });
+    widget.onChanged?.call(bottomMenuList[index].type);
+
+    // Navigate to the respective screen
+    switch (bottomMenuList[index].type) {
+      case BottomBarEnum.Home:
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => HomeScreen()));
+        break;
+      case BottomBarEnum.Chatroom:
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => HomeScreen()));
+        break;
+      case BottomBarEnum.Relax:
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => RelaxScreen()));
+        break;
+      case BottomBarEnum.Resources:
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => HomeScreen()));
+        break;
+      case BottomBarEnum.Profile:
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => HomeScreen()));
+        break;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
+    var screenHeight = screenSize.height;
+
     return Container(
+      height: screenHeight * 0.09,
       decoration: BoxDecoration(
         color: appTheme.gray90004,
       ),
@@ -70,34 +107,57 @@ class CustomBottomBarState extends State<CustomBottomBar> {
                     ? Color(0xFFB5F2FF)
                     : Colors.transparent,
               ),
-              padding: const EdgeInsets.all(6.0),
-              child: Icon(menu.icon,
-                  color: const Color(0XFFD9D9D9),
-                  size: 30), // Set the size here
+              padding: const EdgeInsets.fromLTRB(6.0, 0, 6.0, 0.0),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(
+                    menu.icon,
+                    color: const Color(0XFFD9D9D9),
+                    size: 24,
+                  ),
+                  Text(
+                    menu.title ?? "",
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.white,
+                    ),
+                    textAlign: TextAlign.center,
+                  )
+                ],
+              ),
             ),
             activeIcon: Container(
               decoration: BoxDecoration(
                 color: Color(0xFFB5F2FF),
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(16),
               ),
-              padding: const EdgeInsets.all(6.0),
-              child: Icon(
-                menu.activeIcon,
-                color: selectedIndex == bottomMenuList.indexOf(menu)
-                    ? appTheme.gray90004
-                    : Colors.white,
-                size: 30, // Set the size here
+              padding: const EdgeInsets.fromLTRB(8.0, 0.5, 8.0, 0.5),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(
+                    menu.activeIcon,
+                    color: selectedIndex == bottomMenuList.indexOf(menu)
+                        ? appTheme.gray90004
+                        : Colors.white,
+                    size: 24,
+                  ),
+                  Text(
+                    menu.title ?? "",
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.black,
+                    ),
+                    textAlign: TextAlign.center,
+                  )
+                ],
               ),
             ),
-            label: menu.title,
+            label: "",
           );
         }).toList(),
-        onTap: (index) {
-          setState(() {
-            selectedIndex = index;
-          });
-          widget.onChanged?.call(bottomMenuList[index].type);
-        },
+        onTap: _onItemTapped,
       ),
     );
   }

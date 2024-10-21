@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:stress_and_coping_application/presentation/app_navigation_screen/app_navigation_screen.dart';
 import 'package:stress_and_coping_application/presentation/forgot_password_screen/forgot_password_screen.dart';
 import 'package:stress_and_coping_application/presentation/home_screen/home_screen.dart';
 import 'package:stress_and_coping_application/presentation/sign_up_screen/sign_up_screen.dart';
@@ -222,7 +224,6 @@ class SignInScreen extends StatelessWidget {
   Widget _buildForgotPasswordColumn(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     void _onTap() {
-      // Navigate to login page
       Navigator.push(
         context,
         MaterialPageRoute(
@@ -305,37 +306,10 @@ class SignInScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildFacebookLoginButton(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-
-    return CustomElevatedButton(
-      text: "Login with Facebook",
-      margin: EdgeInsets.symmetric(horizontal: screenWidth * 0.04),
-      leftIcon: Container(
-        margin: EdgeInsets.only(right: screenWidth * 0.075),
-        child: CustomImageView(
-          imagePath: ImageConstant.imgFacebook,
-          height: screenWidth * 0.045,
-          width: screenWidth * 0.045,
-          fit: BoxFit.contain,
-        ),
-      ),
-      buttonStyle: CustomButtonStyles.fillGray,
-      buttonTextStyle: CustomTextStyles.bodyLargeBlack90001?.copyWith(
-        fontSize: screenWidth * 0.04,
-      ),
-      width: screenWidth * 0.9,
-      height: screenWidth * 0.12,
-      onPressed: () => onTapFacebookLoginButton(context),
-    );
-  }
-
   Widget _buildRegisterPromptColumn(BuildContext context) {
-    // TODO: Center the text
     final screenWidth = MediaQuery.of(context).size.width;
 
     void _onTap() {
-      // Navigate to login page
       Navigator.push(
         context,
         MaterialPageRoute(
@@ -377,21 +351,39 @@ class SignInScreen extends StatelessWidget {
   }
 
   Future<void> onTapGoogleLoginButton(BuildContext context) async {
-    await GoogleAuthHelper().googleSignInProcess().then((googleUser) {
+    try {
+      final googleUser = await GoogleAuthHelper().googleSignInProcess();
       if (googleUser != null) {
+        final userEmail = googleUser.email;
+        final userName = googleUser.displayName ?? 'User';
+
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Welcome, $userName')),
+        );
+
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            // builder: (context) => HomeScreen(user: googleUser),
+            builder: (context) => MainScreen(user: googleUser),
+          ),
+        );
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('User data is empty')),
+          SnackBar(content: Text('Google Sign-In failed. Please try again.')),
         );
       }
-    }).catchError((onError) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(onError.toString())),
-      );
-    });
-  }
+    } catch (onError) {
+      String errorMessage = 'An unexpected error occurred.';
+      if (onError is FirebaseAuthException) {
+        errorMessage = onError.message ?? 'Error: ${onError.code}';
+      } else if (onError is Exception) {
+        errorMessage = onError.toString();
+      }
 
-  Future<void> onTapFacebookLoginButton(BuildContext context) async {
-    print("Facebook Login!!!!");
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(errorMessage)),
+      );
+    }
   }
 }

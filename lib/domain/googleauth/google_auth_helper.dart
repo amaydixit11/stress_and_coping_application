@@ -1,13 +1,30 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class GoogleAuthHelper {
   final GoogleSignIn _googleSignIn = GoogleSignIn();
+  final FirebaseAuth _auth = FirebaseAuth.instance;
 
   /// Handle Google Sign-in to authenticate user
-  Future<GoogleSignInAccount?> googleSignInProcess() async {
+  Future<User?> googleSignInProcess() async {
     try {
-      GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
-      return googleUser; // Return the user if successfully signed in
+      // Trigger the authentication flow
+      final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
+
+      // Obtain the auth details from the request
+      final GoogleSignInAuthentication? googleAuth =
+          await googleUser?.authentication;
+
+      // Create a new credential
+      final credential = GoogleAuthProvider.credential(
+        accessToken: googleAuth?.accessToken,
+        idToken: googleAuth?.idToken,
+      );
+
+      // This token can be used to authenticate with Firebase
+      UserCredential userCredential =
+          await _auth.signInWithCredential(credential);
+      return userCredential.user; // Return the user if successfully signed in
     } catch (error) {
       print('Google Sign-In error: $error'); // Handle any errors during sign-in
       return null; // Return null if sign-in fails
@@ -17,8 +34,7 @@ class GoogleAuthHelper {
   /// Check if the user is already signed in through Google
   Future<bool> alreadySignIn() async {
     try {
-      bool isSignedIn = await _googleSignIn.isSignedIn();
-      return isSignedIn; // Return true if the user is already signed in
+      return _auth.currentUser != null; // Check if the current user is not null
     } catch (error) {
       print('Check signed-in status error: $error');
       return false; // Return false if there was an error
@@ -29,10 +45,12 @@ class GoogleAuthHelper {
   Future<void> googleSignOutProcess() async {
     try {
       await _googleSignIn.signOut(); // Perform sign out
+      await _auth.signOut(); // Sign out from Firebase
       print('User signed out');
     } catch (error) {
       print(
-          'Google Sign-Out error: $error'); // Handle any errors during sign-out
+        'Google Sign-Out error: $error',
+      ); // Handle any errors during sign-out
     }
   }
 }

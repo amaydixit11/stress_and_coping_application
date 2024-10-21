@@ -51,14 +51,14 @@ class _FactOfTheDayWidgetState extends State<FactOfTheDayWidget> {
         children: [
           Container(
             width: double.infinity,
-            margin: EdgeInsets.only(right: screenWidth * 0.01),
-            padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.1),
+            margin: EdgeInsets.only(right: screenWidth * 0.005),
+            padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.05),
             child: Column(
               children: [
                 Text("Fact of the day",
                     style: TextStyle(
                       color: appTheme.teal30001,
-                      fontSize: 28,
+                      fontSize: 22,
                     )),
                 SizedBox(height: screenWidth * 0.01),
                 Container(
@@ -71,14 +71,14 @@ class _FactOfTheDayWidgetState extends State<FactOfTheDayWidget> {
                       maxLines: 4,
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.center,
-                      style: CustomTextStyles.bodyLargeLeagueSpartan,
+                      style: theme.textTheme.bodyMedium!.leagueSpartan,
                     ),
                   ),
                 ),
               ],
             ),
           ),
-          SizedBox(height: screenWidth * 0.04),
+          SizedBox(height: screenWidth * 0.01),
         ],
       ),
     );
