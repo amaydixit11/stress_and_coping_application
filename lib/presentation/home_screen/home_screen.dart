@@ -41,125 +41,105 @@ class _HomeScreenState extends State<HomeScreen> {
     }
 
     return SafeArea(
-      child: Scaffold(
-        body: PageView(
-          controller: PageController(initialPage: _selectedIndex),
-          onPageChanged: (index) {
-            setState(() {
-              _selectedIndex = index; // Update index when page changes
-            });
-          },
-          children: [
-            SizedBox(
-              width: double.infinity,
-              child: Container(
+      child: SizedBox(
+        width: double.infinity,
+        child: Container(
+          height: screenHeight,
+          child: Stack(
+            alignment: Alignment.bottomRight,
+            children: [
+              CustomImageView(
+                imagePath: ImageConstant.imgEllipse179508x182,
                 height: screenHeight,
-                child: Stack(
-                  alignment: Alignment.bottomRight,
-                  children: [
-                    CustomImageView(
-                      imagePath: ImageConstant.imgEllipse179508x182,
-                      height: screenHeight,
-                      width: screenWidth,
+                width: screenWidth,
+              ),
+              CustomImageView(
+                imagePath: ImageConstant.imgEpisodeBackground,
+                height: screenHeight,
+                width: screenWidth,
+              ),
+              Align(
+                alignment: Alignment.topCenter,
+                child: Card(
+                  clipBehavior: Clip.antiAlias,
+                  elevation: 0,
+                  margin: EdgeInsets.zero,
+                  color: appTheme.blueGray900,
+                  shape: RoundedRectangleBorder(),
+                  child: Container(
+                    height: screenHeight,
+                    decoration: BoxDecoration(
+                      color: appTheme.blueGray900,
+                      borderRadius: BorderRadiusStyle.roundedBorder30,
                     ),
-                    CustomImageView(
-                      imagePath: ImageConstant.imgEpisodeBackground,
-                      height: screenHeight,
-                      width: screenWidth,
-                    ),
-                    Align(
-                      alignment: Alignment.topCenter,
-                      child: Card(
-                        clipBehavior: Clip.antiAlias,
-                        elevation: 0,
-                        margin: EdgeInsets.zero,
-                        color: appTheme.blueGray900,
-                        shape: RoundedRectangleBorder(),
-                        child: Container(
-                          height: screenHeight,
+                    child: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        Container(
+                          width: double.infinity,
                           decoration: BoxDecoration(
-                            color: appTheme.blueGray900,
-                            borderRadius: BorderRadiusStyle.roundedBorder30,
+                            color: appTheme.teal900,
+                            borderRadius: BorderRadiusStyle.roundedBorder16,
                           ),
-                          child: Stack(
-                            alignment: Alignment.center,
-                            children: [
-                              Container(
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  color: appTheme.teal900,
-                                  borderRadius:
-                                      BorderRadiusStyle.roundedBorder16,
-                                ),
-                                child: SingleChildScrollView(
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      Container(
-                                        width: double.infinity,
-                                        padding: EdgeInsets.symmetric(
-                                          horizontal: screenWidth * 0.03,
-                                          vertical: screenHeight * 0.01,
-                                        ),
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                            image: AssetImage(
-                                              ImageConstant.imgHomeBG,
-                                            ),
-                                            fit: BoxFit.fill,
-                                          ),
-                                        ),
-                                        child: Column(
-                                          children: [
-                                            SizedBox(
-                                                height: screenHeight * 0.02),
-                                            _buildWelcomeUser(context,
-                                                screenHeight, screenWidth),
-                                            SizedBox(
-                                                height: screenHeight * 0.03),
-                                            MoodSelect(
-                                              userID: userID,
-                                            ),
-                                            SizedBox(
-                                                height: screenHeight * 0.02),
-                                            FactOfTheDayWidget(),
-                                            SizedBox(
-                                                height: screenHeight * 0.02),
-                                            StressDataWidget(),
-                                            SizedBox(
-                                                height: screenHeight * 0.03),
-                                            Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Expanded(child: QuizWidget()),
-                                                SizedBox(
-                                                  width: screenWidth * 0.01,
-                                                ),
-                                                Expanded(child: QuizWidget()),
-                                              ],
-                                            ),
-                                            SizedBox(
-                                                height: screenHeight * 0.05),
-                                          ],
-                                        ),
+                          child: SingleChildScrollView(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Container(
+                                  width: double.infinity,
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: screenWidth * 0.03,
+                                    vertical: screenHeight * 0.01,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                        ImageConstant.imgHomeBG,
                                       ),
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      SizedBox(height: screenHeight * 0.02),
+                                      _buildWelcomeUser(
+                                          context, screenHeight, screenWidth),
+                                      SizedBox(height: screenHeight * 0.03),
+                                      MoodSelect(
+                                        userID: userID,
+                                      ),
+                                      SizedBox(height: screenHeight * 0.02),
+                                      FactOfTheDayWidget(),
+                                      SizedBox(height: screenHeight * 0.02),
+                                      StressDataWidget(),
+                                      SizedBox(height: screenHeight * 0.03),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Expanded(child: QuizWidget()),
+                                          SizedBox(
+                                            width: screenWidth * 0.01,
+                                          ),
+                                          Expanded(child: QuizWidget()),
+                                        ],
+                                      ),
+                                      SizedBox(height: screenHeight * 0.05),
                                     ],
                                   ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
-                      ),
+                      ],
                     ),
-                  ],
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
-        bottomNavigationBar: CustomBottomBar(onChanged: _onBottomNavTapped),
       ),
     );
   }

@@ -1,6 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:stress_and_coping_application/presentation/chatroom_screen/chatroom_screen.dart';
+import 'package:stress_and_coping_application/presentation/resources_screen/resources_screen.dart';
 import 'package:stress_and_coping_application/presentation/home_screen/home_screen.dart';
+import 'package:stress_and_coping_application/presentation/profile_screen/profile_screen.dart';
 import 'package:stress_and_coping_application/presentation/relax_screen/relax_screen.dart';
 import 'package:stress_and_coping_application/widgets/custom_bottom_bar.dart';
 
@@ -24,10 +27,10 @@ class _MainScreenState extends State<MainScreen> {
     // Initialize the _screens list here
     _screens = [
       HomeScreen(user: widget.user), // Pass the user to HomeScreen
-      HomeScreen(user: widget.user), // Adjust as necessary
+      ChatroomScreen(), // Adjust as necessary
       RelaxScreen(),
-      HomeScreen(user: widget.user),
-      HomeScreen(user: widget.user),
+      ResourcesScreen(),
+      ProfileScreen()
     ];
   }
 
@@ -42,6 +45,7 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       body: _screens[_selectedIndex],
       bottomNavigationBar: CustomBottomBar(
+        selectedIndex: _selectedIndex,
         onChanged: _onBottomNavTapped,
       ),
     );

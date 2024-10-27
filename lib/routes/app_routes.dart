@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../presentation/app_navigation_screen/app_navigation_screen.dart';
 import '../presentation/chatroom_screen/chatroom_screen.dart';
-import '../presentation/educational_content_screen/educational_content_screen.dart';
+import '../presentation/resources_screen/resources_screen.dart';
 import '../presentation/home_screen/home_screen.dart';
 import '../presentation/on_boarding_one_screen/on_boarding_one_screen.dart';
 // import '../presentation/on_boarding_two_screen/on_boarding_two_screen.dart';

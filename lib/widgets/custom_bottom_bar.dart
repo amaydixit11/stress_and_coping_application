@@ -1,87 +1,21 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:stress_and_coping_application/presentation/home_screen/home_screen.dart';
-import 'package:stress_and_coping_application/presentation/relax_screen/relax_screen.dart';
 import '../core/app_export.dart';
 
-enum BottomBarEnum { Chatroom, Relax, Resources, Profile, Home }
+enum BottomBarEnum { Home, Chatroom, Relax, Resources, Profile }
 
 class CustomBottomBar extends StatefulWidget {
+  final int selectedIndex;
   final Function(BottomBarEnum)? onChanged;
 
-  CustomBottomBar({Key? key, this.onChanged}) : super(key: key);
+  CustomBottomBar({Key? key, required this.selectedIndex, this.onChanged})
+      : super(key: key);
 
   @override
-  CustomBottomBarState createState() => CustomBottomBarState();
+  State<CustomBottomBar> createState() => _CustomBottomBarState();
 }
 
-class CustomBottomBarState extends State<CustomBottomBar> {
-  int selectedIndex = 0;
-
-  List<BottomMenuModel> bottomMenuList = [
-    BottomMenuModel(
-      icon: Icons.home,
-      activeIcon: Icons.home,
-      title: "Home",
-      type: BottomBarEnum.Home,
-    ),
-    BottomMenuModel(
-      icon: Icons.message_rounded,
-      activeIcon: Icons.message_rounded,
-      title: "Chatroom",
-      type: BottomBarEnum.Chatroom,
-    ),
-    BottomMenuModel(
-      icon: CupertinoIcons.game_controller_solid,
-      activeIcon: CupertinoIcons.game_controller_solid,
-      title: "Relax",
-      type: BottomBarEnum.Relax,
-    ),
-    BottomMenuModel(
-      icon: Icons.menu_book_rounded,
-      activeIcon: Icons.menu_book_rounded,
-      title: "Resources",
-      type: BottomBarEnum.Resources,
-    ),
-    BottomMenuModel(
-      icon: Icons.person,
-      activeIcon: Icons.person,
-      title: "Profile",
-      type: BottomBarEnum.Profile,
-    ),
-  ];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      selectedIndex = index;
-    });
-    widget.onChanged?.call(bottomMenuList[index].type);
-
-    // Navigate to the respective screen
-    switch (bottomMenuList[index].type) {
-      case BottomBarEnum.Home:
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => HomeScreen()));
-        break;
-      case BottomBarEnum.Chatroom:
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => HomeScreen()));
-        break;
-      case BottomBarEnum.Relax:
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => RelaxScreen()));
-        break;
-      case BottomBarEnum.Resources:
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => HomeScreen()));
-        break;
-      case BottomBarEnum.Profile:
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => HomeScreen()));
-        break;
-    }
-  }
-
+class _CustomBottomBarState extends State<CustomBottomBar> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
@@ -97,13 +31,13 @@ class CustomBottomBarState extends State<CustomBottomBar> {
         showSelectedLabels: false,
         showUnselectedLabels: false,
         elevation: 0,
-        currentIndex: selectedIndex,
+        currentIndex: widget.selectedIndex,
         type: BottomNavigationBarType.fixed,
-        items: bottomMenuList.map((menu) {
+        items: _bottomMenuList.map((menu) {
           return BottomNavigationBarItem(
             icon: Container(
               decoration: BoxDecoration(
-                color: selectedIndex == bottomMenuList.indexOf(menu)
+                color: widget.selectedIndex == _bottomMenuList.indexOf(menu)
                     ? Color(0xFFB5F2FF)
                     : Colors.transparent,
               ),
@@ -138,9 +72,7 @@ class CustomBottomBarState extends State<CustomBottomBar> {
                 children: [
                   Icon(
                     menu.activeIcon,
-                    color: selectedIndex == bottomMenuList.indexOf(menu)
-                        ? appTheme.gray90004
-                        : Colors.white,
+                    color: Colors.white,
                     size: 24,
                   ),
                   Text(
@@ -157,10 +89,47 @@ class CustomBottomBarState extends State<CustomBottomBar> {
             label: "",
           );
         }).toList(),
-        onTap: _onItemTapped,
+        onTap: (index) {
+          if (widget.onChanged != null) {
+            widget.onChanged!(_bottomMenuList[index].type);
+          }
+        },
       ),
     );
   }
+
+  static List<BottomMenuModel> get _bottomMenuList => [
+        BottomMenuModel(
+          icon: Icons.home,
+          activeIcon: Icons.home,
+          title: "Home",
+          type: BottomBarEnum.Home,
+        ),
+        BottomMenuModel(
+          icon: Icons.message_rounded,
+          activeIcon: Icons.message_rounded,
+          title: "Chatroom",
+          type: BottomBarEnum.Chatroom,
+        ),
+        BottomMenuModel(
+          icon: CupertinoIcons.game_controller_solid,
+          activeIcon: CupertinoIcons.game_controller_solid,
+          title: "Relax",
+          type: BottomBarEnum.Relax,
+        ),
+        BottomMenuModel(
+          icon: Icons.menu_book_rounded,
+          activeIcon: Icons.menu_book_rounded,
+          title: "Resources",
+          type: BottomBarEnum.Resources,
+        ),
+        BottomMenuModel(
+          icon: Icons.person,
+          activeIcon: Icons.person,
+          title: "Profile",
+          type: BottomBarEnum.Profile,
+        ),
+      ];
 }
 
 class BottomMenuModel {

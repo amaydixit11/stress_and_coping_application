@@ -1,0 +1,1435 @@
+{
+    "quizzes": [
+        {
+            "title": "Mental Health Awareness Quiz",
+            "summary": "This quiz helps you reflect on your understanding of mental health, including symptoms, myths, and coping strategies. Your results will provide insights into your awareness level and guidance for further exploration.",
+            "answers": [
+                1,
+                0,
+                1,
+                2,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                2,
+                1
+            ],
+            "resultsTitle": [
+                "Limited Awareness",
+                "Basic Awareness",
+                "Moderate Awareness",
+                "Solid Awareness",
+                "High Awareness",
+                "Exceptional Awareness"
+            ],
+            "resultsDescription": [
+                "You have a limited understanding of mental health issues and may hold misconceptions. It's essential to seek more information to help you recognize the importance of mental health. Consider reading articles, attending workshops, or discussing with friends or professionals to improve your awareness.",
+                "You have a foundational understanding of mental health concepts but there's room for improvement. You recognize some symptoms and coping mechanisms, yet you might benefit from further education. Engaging in discussions about mental health and exploring credible resources can help expand your knowledge.",
+                "You possess a good understanding of mental health issues, recognizing symptoms and effective coping strategies. You are aware of the stigma associated with mental health but may not fully engage in conversations about it. Continue to seek knowledge and engage with communities or groups that focus on mental well-being.",
+                "You demonstrate a solid understanding of mental health and its impact on overall well-being. You're aware of effective coping mechanisms and the importance of discussing mental health openly. Consider sharing your knowledge with others, as your insights can help reduce stigma and support those around you.",
+                "You show a high level of awareness regarding mental health issues. You understand various coping strategies, recognize the importance of seeking help, and are comfortable discussing mental health with others. You can play a crucial role in supporting friends and family, as well as advocating for mental health awareness in your community.",
+                "Your understanding of mental health is exceptional. You are well-informed about symptoms, treatment options, and the role of mental health in overall well-being. You likely practice self-care and promote open discussions about mental health. Consider mentoring or leading initiatives that foster mental health awareness and support in your community."
+            ],
+            "questions": [
+                {
+                    "question": "What is a common symptom of depression?",
+                    "options": {
+                        "A": "Increased energy",
+                        "B": "Persistent sadness",
+                        "C": "Enhanced motivation",
+                        "D": "Heightened focus"
+                    }
+                },
+                {
+                    "question": "Which of the following is a myth about mental health?",
+                    "options": {
+                        "A": "Mental health issues are rare",
+                        "B": "Anyone can experience mental health problems",
+                        "C": "Treatment can help",
+                        "D": "Mental health affects physical health"
+                    }
+                },
+                {
+                    "question": "What is an effective way to cope with anxiety?",
+                    "options": {
+                        "A": "Ignoring it",
+                        "B": "Deep breathing exercises",
+                        "C": "Isolating oneself",
+                        "D": "Excessive caffeine consumption"
+                    }
+                },
+                {
+                    "question": "How often do you talk to someone about your feelings?",
+                    "options": {
+                        "A": "Daily",
+                        "B": "Weekly",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "Which of the following can help reduce stigma about mental health?",
+                    "options": {
+                        "A": "Silence",
+                        "B": "Open discussions",
+                        "C": "Stereotyping",
+                        "D": "Avoiding the topic"
+                    }
+                },
+                {
+                    "question": "What is a common sign of stress?",
+                    "options": {
+                        "A": "Increased creativity",
+                        "B": "Physical tension",
+                        "C": "Improved sleep",
+                        "D": "Heightened empathy"
+                    }
+                },
+                {
+                    "question": "How do you usually respond to stressful situations?",
+                    "options": {
+                        "A": "Stay calm and think logically",
+                        "B": "Panic and feel overwhelmed",
+                        "C": "Seek support from others",
+                        "D": "Avoid the situation"
+                    }
+                },
+                {
+                    "question": "Which activity is beneficial for mental health?",
+                    "options": {
+                        "A": "Excessive social media use",
+                        "B": "Regular exercise",
+                        "C": "Overworking",
+                        "D": "Consuming junk food"
+                    }
+                },
+                {
+                    "question": "What is an important aspect of mental health?",
+                    "options": {
+                        "A": "Ignoring problems",
+                        "B": "Seeking help when needed",
+                        "C": "Comparing yourself to others",
+                        "D": "Keeping everything to yourself"
+                    }
+                },
+                {
+                    "question": "How comfortable are you discussing mental health?",
+                    "options": {
+                        "A": "Very comfortable",
+                        "B": "Somewhat comfortable",
+                        "C": "Uncomfortable",
+                        "D": "Very uncomfortable"
+                    }
+                },
+                {
+                    "question": "Which of these is NOT a form of therapy?",
+                    "options": {
+                        "A": "Cognitive Behavioral Therapy (CBT)",
+                        "B": "Psychotherapy",
+                        "C": "Mindfulness meditation",
+                        "D": "Aversion therapy"
+                    }
+                },
+                {
+                    "question": "What role does sleep play in mental health?",
+                    "options": {
+                        "A": "It has no effect",
+                        "B": "It is crucial for overall well-being",
+                        "C": "It only affects physical health",
+                        "D": "It is less important than diet"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Stress Level Assessment",
+            "summary": "This quiz helps you assess your stress levels and management techniques by exploring your stress sources, coping methods, and time management practices. Your responses will provide insights into your stress management style and suggest potential strategies for improvement.",
+            "answers": [
+                1,
+                0,
+                1,
+                2,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                2,
+                1
+            ],
+            "resultsTitle": [
+                "Very Low Stress Level",
+                "Low Stress Level",
+                "Moderate Stress Level",
+                "High Stress Level",
+                "Very High Stress Level",
+                "Extreme Stress Level"
+            ],
+            "resultsDescription": [
+                "Your responses indicate a very low level of stress. You may be managing your stress effectively or facing few stressors in your life. Keep maintaining your current habits for well-being.",
+                "You have a low level of stress. While you may experience some stressors, it appears that you handle them reasonably well. Consider continuing your coping strategies to maintain this balance.",
+                "You exhibit a moderate level of stress. You recognize several stressors and may benefit from additional coping techniques. Reflecting on your stress sources and incorporating new strategies could help.",
+                "You show a high level of stress. It’s important to assess your coping mechanisms and consider implementing stress-reducing techniques. Engaging in relaxation practices may be beneficial.",
+                "You have a very high level of stress. It's crucial to actively manage your stress through effective techniques. Seeking support from friends, family, or professionals might be necessary.",
+                "Your responses indicate an extreme level of stress. It’s important to address this proactively. Consider reaching out for support and exploring comprehensive stress management strategies to improve your well-being."
+            ],
+            "questions": [
+                {
+                    "question": "How often do you feel overwhelmed?",
+                    "options": {
+                        "A": "Rarely",
+                        "B": "Sometimes",
+                        "C": "Often",
+                        "D": "Always"
+                    }
+                },
+                {
+                    "question": "What is your primary source of stress?",
+                    "options": {
+                        "A": "Work",
+                        "B": "Relationships",
+                        "C": "Financial issues",
+                        "D": "Health concerns"
+                    }
+                },
+                {
+                    "question": "How do you typically cope with stress?",
+                    "options": {
+                        "A": "Exercise",
+                        "B": "Avoidance",
+                        "C": "Talking to friends",
+                        "D": "Procrastination"
+                    }
+                },
+                {
+                    "question": "How would you rate your sleep quality?",
+                    "options": {
+                        "A": "Excellent",
+                        "B": "Good",
+                        "C": "Fair",
+                        "D": "Poor"
+                    }
+                },
+                {
+                    "question": "How often do you take breaks during work or study?",
+                    "options": {
+                        "A": "Regularly",
+                        "B": "Occasionally",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "Do you find it hard to relax?",
+                    "options": {
+                        "A": "Not at all",
+                        "B": "Sometimes",
+                        "C": "Often",
+                        "D": "Always"
+                    }
+                },
+                {
+                    "question": "How well do you manage your time?",
+                    "options": {
+                        "A": "Very well",
+                        "B": "Somewhat well",
+                        "C": "Poorly",
+                        "D": "Very poorly"
+                    }
+                },
+                {
+                    "question": "How often do you engage in hobbies or leisure activities?",
+                    "options": {
+                        "A": "Daily",
+                        "B": "Weekly",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "What do you do when you feel stressed?",
+                    "options": {
+                        "A": "Practice mindfulness",
+                        "B": "Complain",
+                        "C": "Ignore it",
+                        "D": "Seek distractions"
+                    }
+                },
+                {
+                    "question": "How do you feel about your workload?",
+                    "options": {
+                        "A": "Manageable",
+                        "B": "Somewhat heavy",
+                        "C": "Heavy",
+                        "D": "Overwhelming"
+                    }
+                },
+                {
+                    "question": "Do you practice any stress-reducing techniques?",
+                    "options": {
+                        "A": "Yes, regularly",
+                        "B": "Sometimes",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How often do you talk about your stress with others?",
+                    "options": {
+                        "A": "Frequently",
+                        "B": "Occasionally",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Mood Tracker Quiz",
+            "summary": "This mood tracker quiz is designed to help you gain awareness of your emotional patterns and overall mood management. It includes questions on daily mood, influences, coping mechanisms, self-expression, and the role of relationships and physical activities in your emotional well-being.\nYour answers will reveal your current mood outlook and provide guidance on areas where you can improve to maintain or boost your emotional health.",
+            "answers": [
+                1,
+                0,
+                1,
+                2,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                2,
+                1
+            ],
+            "resultsTitle": [
+                "Very Positive Mood",
+                "Positive Mood",
+                "Neutral Mood",
+                "Negative Mood",
+                "Very Negative Mood",
+                "Extreme Negative Mood"
+            ],
+            "resultsDescription": [
+                "Your responses indicate a very positive mood today. You engage in activities that bring you joy and practice gratitude frequently. Keep nurturing your positive emotions and social connections.",
+                "You have a positive mood overall. You likely engage in activities that enhance your happiness and maintain healthy relationships. Continue to express your feelings and practice gratitude.",
+                "You exhibit a neutral mood. You may experience fluctuations in your feelings but are generally stable. Consider incorporating more joyful activities and mindfulness practices into your routine.",
+                "Your responses suggest a negative mood. It may be helpful to identify stressors and develop coping strategies. Engaging in social interactions and physical activity could improve your mood.",
+                "You indicate a very negative mood. It’s important to seek support and explore activities that can lift your spirits. Reflecting on your feelings and practicing gratitude might help.",
+                "Your responses reflect an extreme negative mood. It’s crucial to address these feelings seriously. Consider reaching out for professional support and engaging in practices that promote emotional well-being."
+            ],
+            "questions": [
+                {
+                    "question": "How would you describe your mood today?",
+                    "options": {
+                        "A": "Very happy",
+                        "B": "Neutral",
+                        "C": "A bit down",
+                        "D": "Very sad"
+                    }
+                },
+                {
+                    "question": "What typically influences your mood?",
+                    "options": {
+                        "A": "Social interactions",
+                        "B": "Work-related issues",
+                        "C": "Personal achievements",
+                        "D": "Health concerns"
+                    }
+                },
+                {
+                    "question": "How often do you practice gratitude?",
+                    "options": {
+                        "A": "Daily",
+                        "B": "Occasionally",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "Do you engage in activities that bring you joy?",
+                    "options": {
+                        "A": "Frequently",
+                        "B": "Sometimes",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How often do you express your feelings?",
+                    "options": {
+                        "A": "Often",
+                        "B": "Sometimes",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How do you usually respond to negative emotions?",
+                    "options": {
+                        "A": "Talk about them",
+                        "B": "Keep them to myself",
+                        "C": "Distract myself",
+                        "D": "Write them down"
+                    }
+                },
+                {
+                    "question": "Do you notice patterns in your mood?",
+                    "options": {
+                        "A": "Yes, very clear",
+                        "B": "Somewhat",
+                        "C": "Rarely",
+                        "D": "Not at all"
+                    }
+                },
+                {
+                    "question": "What role does physical activity play in your mood?",
+                    "options": {
+                        "A": "Huge positive impact",
+                        "B": "Some impact",
+                        "C": "Little impact",
+                        "D": "No impact"
+                    }
+                },
+                {
+                    "question": "How do you feel about your current relationships?",
+                    "options": {
+                        "A": "Very fulfilling",
+                        "B": "Mostly good",
+                        "C": "Some challenges",
+                        "D": "Not supportive"
+                    }
+                },
+                {
+                    "question": "How do you handle stress?",
+                    "options": {
+                        "A": "Manage it well",
+                        "B": "Sometimes struggle",
+                        "C": "Often overwhelmed",
+                        "D": "Avoid it"
+                    }
+                },
+                {
+                    "question": "How often do you engage in mindfulness practices?",
+                    "options": {
+                        "A": "Daily",
+                        "B": "Occasionally",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "What's your usual sleep quality?",
+                    "options": {
+                        "A": "Excellent",
+                        "B": "Good",
+                        "C": "Fair",
+                        "D": "Poor"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Work-Life Balance Check",
+            "summary": "This quiz is designed to help you reflect on your current work-life balance, including time management, boundary-setting, and stress-relief habits. It explores how often you feel overwhelmed, your prioritization strategies, and how well you separate work from personal life.\n\nYour answers will offer insight into areas where you may need to improve your balance, helping you set healthier boundaries and prioritize your well-being.",
+            "answers": [
+                1,
+                0,
+                1,
+                2,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                2,
+                1
+            ],
+            "resultsTitle": [
+                "Excellent Balance",
+                "Good Balance",
+                "Fair Balance",
+                "Poor Balance",
+                "Very Poor Balance",
+                "Critical Imbalance"
+            ],
+            "resultsDescription": [
+                "Your responses indicate excellent work-life balance. You manage your time effectively, set clear boundaries, and make time for personal activities. Keep maintaining these positive habits.",
+                "You have a good work-life balance. While you manage your time reasonably well, consider further optimizing your boundaries and personal time to enhance your satisfaction.",
+                "You exhibit a fair balance. You may feel overwhelmed at times and could benefit from stronger boundaries and more frequent disconnection from work.",
+                "Your responses suggest a poor balance. You may frequently feel overwhelmed and struggle with time management. It's essential to assess your priorities and make adjustments to improve your well-being.",
+                "You indicate a very poor work-life balance. It’s important to address these challenges proactively. Consider setting clear boundaries and prioritizing personal time.",
+                "Your responses reflect a critical imbalance. You may feel overwhelmed and unsupported. It’s crucial to seek support and explore strategies to improve your work-life balance."
+            ],
+            "questions": [
+                {
+                    "question": "How often do you feel overwhelmed by work?",
+                    "options": {
+                        "A": "Rarely",
+                        "B": "Sometimes",
+                        "C": "Often",
+                        "D": "Always"
+                    }
+                },
+                {
+                    "question": "How do you typically manage your time?",
+                    "options": {
+                        "A": "Very effectively",
+                        "B": "Somewhat effectively",
+                        "C": "Poorly",
+                        "D": "Very poorly"
+                    }
+                },
+                {
+                    "question": "How often do you disconnect from work after hours?",
+                    "options": {
+                        "A": "Always",
+                        "B": "Sometimes",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How do you prioritise tasks?",
+                    "options": {
+                        "A": "Based on importance",
+                        "B": "By deadlines",
+                        "C": "I often procrastinate",
+                        "D": "I feel overwhelmed by choices"
+                    }
+                },
+                {
+                    "question": "How satisfied are you with your work-life balance?",
+                    "options": {
+                        "A": "Very satisfied",
+                        "B": "Satisfied",
+                        "C": "Unsatisfied",
+                        "D": "Very unsatisfied"
+                    }
+                },
+                {
+                    "question": "Do you set boundaries with work?",
+                    "options": {
+                        "A": "Yes, always",
+                        "B": "Sometimes",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How often do you make time for personal activities?",
+                    "options": {
+                        "A": "Daily",
+                        "B": "Weekly",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How do you handle work-related stress?",
+                    "options": {
+                        "A": "Use stress management techniques",
+                        "B": "Talk to colleagues",
+                        "C": "Internalize it",
+                        "D": "Avoid thinking about it"
+                    }
+                },
+                {
+                    "question": "How often do you take vacations or breaks?",
+                    "options": {
+                        "A": "Regularly",
+                        "B": "Occasionally",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "Do you feel supported by your employer in maintaining balance?",
+                    "options": {
+                        "A": "Yes, completely",
+                        "B": "Somewhat",
+                        "C": "Not really",
+                        "D": "Not at all"
+                    }
+                },
+                {
+                    "question": "How do you feel about your workload?",
+                    "options": {
+                        "A": "Manageable",
+                        "B": "Somewhat heavy",
+                        "C": "Heavy",
+                        "D": "Overwhelming"
+                    }
+                },
+                {
+                    "question": "What do you do to unwind after work?",
+                    "options": {
+                        "A": "Engage in hobbies",
+                        "B": "Watch TV",
+                        "C": "Scroll through social media",
+                        "D": "Continue working"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Anxiety Coping Strategies",
+            "summary": "This quiz helps you assess your strategies for managing anxiety, covering triggers, coping techniques, mindfulness practices, and social support. It also includes questions on physical activity, sleep quality, and openness to seeking professional help.\n\nBy the end, your responses will reveal the effectiveness of your current coping mechanisms, with guidance on additional strategies that might be helpful for managing anxiety.",
+            "answers": [
+                1,
+                0,
+                1,
+                2,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                2,
+                1
+            ],
+            "resultsTitle": [
+                "Excellent Coping",
+                "Good Coping",
+                "Fair Coping",
+                "Poor Coping",
+                "Very Poor Coping",
+                "Critical Coping Challenges"
+            ],
+            "resultsDescription": [
+                "Your responses indicate excellent coping strategies for anxiety. You regularly practice mindfulness and have a strong support network. Keep engaging in these positive practices.",
+                "You have good coping strategies in place. You manage anxiety effectively, though there may be some areas for improvement. Consider deepening your mindfulness practices.",
+                "You exhibit fair coping strategies. While you manage anxiety somewhat well, you may benefit from exploring additional techniques and reaching out for support.",
+                "Your responses suggest poor coping strategies. You may feel anxious often and struggle to manage it effectively. It's essential to identify triggers and develop stronger coping mechanisms.",
+                "You indicate very poor coping strategies. Anxiety may significantly impact your life, and it's crucial to seek professional help and build a support network.",
+                "Your responses reflect critical coping challenges. You may feel overwhelmed by anxiety and struggle to find effective strategies. Consider reaching out for immediate support and professional guidance."
+            ],
+            "questions": [
+                {
+                    "question": "How often do you feel anxious?",
+                    "options": {
+                        "A": "Rarely",
+                        "B": "Sometimes",
+                        "C": "Often",
+                        "D": "Always"
+                    }
+                },
+                {
+                    "question": "What triggers your anxiety the most?",
+                    "options": {
+                        "A": "Social situations",
+                        "B": "Work-related issues",
+                        "C": "Health concerns",
+                        "D": "Financial problems"
+                    }
+                },
+                {
+                    "question": "How do you usually cope with anxiety?",
+                    "options": {
+                        "A": "Deep breathing",
+                        "B": "Talking to friends",
+                        "C": "Avoiding triggers",
+                        "D": "Distraction techniques"
+                    }
+                },
+                {
+                    "question": "Do you practice mindfulness or meditation?",
+                    "options": {
+                        "A": "Yes, regularly",
+                        "B": "Occasionally",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How do you feel after engaging in a coping strategy?",
+                    "options": {
+                        "A": "Calmer",
+                        "B": "Neutral",
+                        "C": "More anxious",
+                        "D": "Indifferent"
+                    }
+                },
+                {
+                    "question": "How comfortable are you discussing your anxiety with others?",
+                    "options": {
+                        "A": "Very comfortable",
+                        "B": "Somewhat comfortable",
+                        "C": "Uncomfortable",
+                        "D": "Very uncomfortable"
+                    }
+                },
+                {
+                    "question": "What role does physical activity play in managing your anxiety?",
+                    "options": {
+                        "A": "Huge positive impact",
+                        "B": "Some impact",
+                        "C": "Little impact",
+                        "D": "No impact"
+                    }
+                },
+                {
+                    "question": "How do you handle anxious thoughts?",
+                    "options": {
+                        "A": "Challenge them",
+                        "B": "Accept them",
+                        "C": "Ignore them",
+                        "D": "Dwell on them"
+                    }
+                },
+                {
+                    "question": "Do you have a support network for your anxiety?",
+                    "options": {
+                        "A": "Yes, strong support",
+                        "B": "Some support",
+                        "C": "Little support",
+                        "D": "No support"
+                    }
+                },
+                {
+                    "question": "How often do you take breaks when feeling anxious?",
+                    "options": {
+                        "A": "Always",
+                        "B": "Sometimes",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How do you feel about seeking professional help?",
+                    "options": {
+                        "A": "Very open",
+                        "B": "Somewhat open",
+                        "C": "Reluctant",
+                        "D": "Not at all"
+                    }
+                },
+                {
+                    "question": "What's your usual sleep quality?",
+                    "options": {
+                        "A": "Excellent",
+                        "B": "Good",
+                        "C": "Fair",
+                        "D": "Poor"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Sleep Quality Assessment",
+            "summary": "This quiz helps evaluate the quality of your sleep and identify habits or factors that may impact restful sleep. Answer these questions to see where your sleep routine excels or might need some adjustments.",
+            "answers": [
+                1,
+                0,
+                1,
+                2,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                2,
+                1
+            ],
+            "resultsTitle": [
+                "Excellent Sleep Quality",
+                "Good Sleep Quality",
+                "Fair Sleep Quality",
+                "Poor Sleep Quality",
+                "Very Poor Sleep Quality",
+                "Critical Sleep Issues"
+            ],
+            "resultsDescription": [
+                "Your responses indicate excellent sleep quality. You get adequate rest, have a comfortable sleep environment, and practice good sleep hygiene. Keep up the great habits!",
+                "You have good sleep quality. While you generally feel rested, consider further improving your sleep environment and practices for even better rest.",
+                "Your sleep quality is fair. You may experience occasional difficulties, but there are opportunities to enhance your sleep routine.",
+                "Your responses suggest poor sleep quality. Frequent disturbances and lack of a proper sleep schedule indicate a need for changes to improve your rest.",
+                "You indicate very poor sleep quality. It's crucial to address these issues proactively. Consider assessing your sleep environment and habits for improvements.",
+                "Your responses reflect critical sleep issues. You may often feel drowsy during the day and struggle to achieve restful sleep. Seeking professional guidance may be beneficial."
+            ],
+            "questions": [
+                {
+                    "question": "How many hours of sleep do you typically get?",
+                    "options": {
+                        "A": "8 or more",
+                        "B": "6-7",
+                        "C": "4-5",
+                        "D": "Less than 4"
+                    }
+                },
+                {
+                    "question": "How often do you wake up feeling rested?",
+                    "options": {
+                        "A": "Always",
+                        "B": "Sometimes",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How do you feel about your sleep environment?",
+                    "options": {
+                        "A": "Very comfortable",
+                        "B": "Somewhat comfortable",
+                        "C": "Uncomfortable",
+                        "D": "Very uncomfortable"
+                    }
+                },
+                {
+                    "question": "How often do you have trouble falling asleep?",
+                    "options": {
+                        "A": "Rarely",
+                        "B": "Sometimes",
+                        "C": "Often",
+                        "D": "Always"
+                    }
+                },
+                {
+                    "question": "Do you use screens before bed?",
+                    "options": {
+                        "A": "No, never",
+                        "B": "Sometimes",
+                        "C": "Often",
+                        "D": "Always"
+                    }
+                },
+                {
+                    "question": "How often do you feel drowsy during the day?",
+                    "options": {
+                        "A": "Rarely",
+                        "B": "Sometimes",
+                        "C": "Often",
+                        "D": "Always"
+                    }
+                },
+                {
+                    "question": "Do you have a regular sleep schedule?",
+                    "options": {
+                        "A": "Yes, always",
+                        "B": "Most of the time",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How often do you wake up during the night?",
+                    "options": {
+                        "A": "Rarely",
+                        "B": "Sometimes",
+                        "C": "Often",
+                        "D": "Always"
+                    }
+                },
+                {
+                    "question": "Do you practise relaxation techniques before bed?",
+                    "options": {
+                        "A": "Yes, regularly",
+                        "B": "Sometimes",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How do you feel about your sleep hygiene?",
+                    "options": {
+                        "A": "Excellent",
+                        "B": "Good",
+                        "C": "Fair",
+                        "D": "Poor"
+                    }
+                },
+                {
+                    "question": "How often do you experience nightmares or disturbances in your sleep?",
+                    "options": {
+                        "A": "Rarely",
+                        "B": "Sometimes",
+                        "C": "Often",
+                        "D": "Always"
+                    }
+                },
+                {
+                    "question": "How do you feel about napping during the day?",
+                    "options": {
+                        "A": "Very beneficial",
+                        "B": "Sometimes helpful",
+                        "C": "Neutral",
+                        "D": "Not helpful"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Goal Setting and Achievement Quiz",
+            "summary": "Discover how effectively you set, prioritize, and achieve goals. This quiz will help you gauge your goal-setting habits and reveal areas where you might enhance your approach for better success.",
+            "answers": [
+                1,
+                0,
+                1,
+                2,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                2,
+                1
+            ],
+            "resultsTitle": [
+                "Excellent Goal Setter",
+                "Good Goal Setter",
+                "Fair Goal Setter",
+                "Poor Goal Setter",
+                "Very Poor Goal Setting",
+                "Critical Goal Setting Challenges"
+            ],
+            "resultsDescription": [
+                "Your responses indicate excellent goal-setting skills. You regularly set, review, and adapt your goals, and you celebrate your achievements. Keep striving!",
+                "You have good goal-setting abilities. While you generally prioritize effectively, consider enhancing your goal review process for even greater success.",
+                "You exhibit fair goal-setting skills. There are areas for improvement in prioritization and adapting goals to better achieve your objectives.",
+                "Your responses suggest poor goal-setting practices. You may struggle with motivation and adaptability. It's important to reflect on your goals and develop a structured approach.",
+                "You indicate very poor goal-setting habits. Lack of confidence and difficulty in prioritization may hinder your progress. Consider seeking support and guidance.",
+                "Your responses reflect critical challenges in goal setting. You may feel overwhelmed and unsure. It’s essential to seek strategies to improve your goal-setting approach."
+            ],
+            "questions": [
+                {
+                    "question": "How often do you set goals for yourself?",
+                    "options": {
+                        "A": "Regularly",
+                        "B": "Sometimes",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How do you feel about your ability to achieve your goals?",
+                    "options": {
+                        "A": "Very confident",
+                        "B": "Somewhat confident",
+                        "C": "Uncertain",
+                        "D": "Not confident"
+                    }
+                },
+                {
+                    "question": "How do you prioritize your goals?",
+                    "options": {
+                        "A": "Effectively",
+                        "B": "Sometimes effectively",
+                        "C": "Poorly",
+                        "D": "I struggle with prioritization"
+                    }
+                },
+                {
+                    "question": "How often do you review your progress?",
+                    "options": {
+                        "A": "Regularly",
+                        "B": "Occasionally",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How do you celebrate your achievements?",
+                    "options": {
+                        "A": "I reward myself",
+                        "B": "I share with others",
+                        "C": "I downplay them",
+                        "D": "I don't celebrate"
+                    }
+                },
+                {
+                    "question": "How do you handle setbacks in goal achievement?",
+                    "options": {
+                        "A": "I adapt and try again",
+                        "B": "I feel discouraged",
+                        "C": "I blame others",
+                        "D": "I give up"
+                    }
+                },
+                {
+                    "question": "How often do you seek support for your goals?",
+                    "options": {
+                        "A": "Regularly",
+                        "B": "Sometimes",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How do you feel about long-term goals?",
+                    "options": {
+                        "A": "Excited",
+                        "B": "Hesitant",
+                        "C": "Overwhelmed",
+                        "D": "I avoid thinking about them"
+                    }
+                },
+                {
+                    "question": "How do you feel about short-term goals?",
+                    "options": {
+                        "A": "Motivating",
+                        "B": "Helpful",
+                        "C": "Sometimes challenging",
+                        "D": "I ignore them"
+                    }
+                },
+                {
+                    "question": "How often do you adjust your goals?",
+                    "options": {
+                        "A": "Regularly",
+                        "B": "Occasionally",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How do you view your time management?",
+                    "options": {
+                        "A": "Effective",
+                        "B": "Sometimes effective",
+                        "C": "Poor",
+                        "D": "I struggle"
+                    }
+                },
+                {
+                    "question": "How often do you reflect on your goals?",
+                    "options": {
+                        "A": "Regularly",
+                        "B": "Occasionally",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Social Connection Assessment",
+            "summary": "This assessment measures the strength and satisfaction of your social connections. Find out how well you engage with others and identify opportunities to enrich your social life.",
+            "answers": [
+                1,
+                0,
+                1,
+                2,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                2,
+                1
+            ],
+            "resultsTitle": [
+                "Strong Social Connections",
+                "Good Social Connections",
+                "Fair Social Connections",
+                "Poor Social Connections",
+                "Very Poor Social Connections",
+                "Critical Social Isolation"
+            ],
+            "resultsDescription": [
+                "Your responses indicate strong social connections. You regularly engage with friends and family and feel fulfilled in your social life. Maintain these positive relationships!",
+                "You have good social connections. While you engage with others, consider seeking more opportunities to deepen those relationships for greater fulfillment.",
+                "You exhibit fair social connections. There may be room for improvement in reaching out to loved ones and participating in social activities.",
+                "Your responses suggest poor social connections. You may feel isolated and struggle with communication. It’s essential to seek ways to connect with others.",
+                "You indicate very poor social connections. Feelings of loneliness and discomfort in social situations may significantly affect your well-being. Seeking support can be beneficial.",
+                "Your responses reflect critical social isolation. It's vital to explore opportunities to engage with others and address feelings of loneliness actively."
+            ],
+            "questions": [
+                {
+                    "question": "How often do you spend time with friends or family?",
+                    "options": {
+                        "A": "Daily",
+                        "B": "Weekly",
+                        "C": "Monthly",
+                        "D": "Rarely"
+                    }
+                },
+                {
+                    "question": "How do you feel about your social life?",
+                    "options": {
+                        "A": "Very fulfilling",
+                        "B": "Mostly good",
+                        "C": "Somewhat lacking",
+                        "D": "Very unsatisfying"
+                    }
+                },
+                {
+                    "question": "How often do you reach out to loved ones?",
+                    "options": {
+                        "A": "Regularly",
+                        "B": "Sometimes",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How comfortable are you in social situations?",
+                    "options": {
+                        "A": "Very comfortable",
+                        "B": "Somewhat comfortable",
+                        "C": "Uncomfortable",
+                        "D": "Very uncomfortable"
+                    }
+                },
+                {
+                    "question": "How do you make new friends?",
+                    "options": {
+                        "A": "Actively seek opportunities",
+                        "B": "Sometimes through activities",
+                        "C": "Rarely try",
+                        "D": "I avoid it"
+                    }
+                },
+                {
+                    "question": "How often do you engage in group activities?",
+                    "options": {
+                        "A": "Frequently",
+                        "B": "Occasionally",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How important are social connections to you?",
+                    "options": {
+                        "A": "Very important",
+                        "B": "Somewhat important",
+                        "C": "Not very important",
+                        "D": "Not at all important"
+                    }
+                },
+                {
+                    "question": "How often do you support others in your life?",
+                    "options": {
+                        "A": "Always",
+                        "B": "Sometimes",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How do you feel after social interactions?",
+                    "options": {
+                        "A": "Energized",
+                        "B": "Neutral",
+                        "C": "Tired",
+                        "D": "Drained"
+                    }
+                },
+                {
+                    "question": "How often do you seek help from friends or family?",
+                    "options": {
+                        "A": "Regularly",
+                        "B": "Sometimes",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How do you communicate with others?",
+                    "options": {
+                        "A": "Openly and honestly",
+                        "B": "Somewhat openly",
+                        "C": "Avoid deep topics",
+                        "D": "I struggle to communicate"
+                    }
+                },
+                {
+                    "question": "How do you feel about loneliness?",
+                    "options": {
+                        "A": "I manage it well",
+                        "B": "I feel it sometimes",
+                        "C": "I often feel lonely",
+                        "D": "I struggle with it"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Emotional Well-being Quiz",
+            "summary": "Evaluate your emotional health and identify patterns in how you handle emotions, stress, and joy. This quiz can help you understand and improve your emotional well-being.",
+            "answers": [
+                1,
+                0,
+                1,
+                2,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                2,
+                1
+            ],
+            "resultsTitle": [
+                "Excellent Emotional Well-being",
+                "Good Emotional Well-being",
+                "Fair Emotional Well-being",
+                "Poor Emotional Well-being",
+                "Very Poor Emotional Well-being",
+                "Critical Emotional Distress"
+            ],
+            "resultsDescription": [
+                "Your responses indicate excellent emotional well-being. You regularly engage in activities that bring joy and effectively manage your emotions. Keep nurturing your positivity!",
+                "You have good emotional well-being. While you handle emotions reasonably well, consider deepening your practices for reflection and gratitude.",
+                "You exhibit fair emotional well-being. There may be challenges in expressing feelings and managing stress. It's important to explore additional support and strategies.",
+                "Your responses suggest poor emotional well-being. You may struggle with negative emotions and not engage in activities that bring you joy. Seeking support is essential.",
+                "You indicate very poor emotional well-being. Frequent feelings of distress and a lack of healthy coping strategies may affect your daily life. Consider professional help.",
+                "Your responses reflect critical emotional distress. It's vital to seek immediate support and develop healthy coping mechanisms to improve your well-being."
+            ],
+            "questions": [
+                {
+                    "question": "How often do you feel happy?",
+                    "options": {
+                        "A": "Daily",
+                        "B": "Weekly",
+                        "C": "Occasionally",
+                        "D": "Rarely"
+                    }
+                },
+                {
+                    "question": "How often do you express your emotions?",
+                    "options": {
+                        "A": "Always",
+                        "B": "Sometimes",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How do you handle negative emotions?",
+                    "options": {
+                        "A": "I process them healthily",
+                        "B": "I try to ignore them",
+                        "C": "I suppress them",
+                        "D": "I get overwhelmed"
+                    }
+                },
+                {
+                    "question": "How often do you engage in activities that bring you joy?",
+                    "options": {
+                        "A": "Regularly",
+                        "B": "Occasionally",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How comfortable are you talking about your feelings?",
+                    "options": {
+                        "A": "Very comfortable",
+                        "B": "Somewhat comfortable",
+                        "C": "Uncomfortable",
+                        "D": "Very uncomfortable"
+                    }
+                },
+                {
+                    "question": "How often do you practice gratitude?",
+                    "options": {
+                        "A": "Daily",
+                        "B": "Weekly",
+                        "C": "Occasionally",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How do you feel about your emotional health?",
+                    "options": {
+                        "A": "Very positive",
+                        "B": "Generally good",
+                        "C": "Somewhat negative",
+                        "D": "Very negative"
+                    }
+                },
+                {
+                    "question": "How do you respond to stress?",
+                    "options": {
+                        "A": "Effectively",
+                        "B": "Somewhat effectively",
+                        "C": "Poorly",
+                        "D": "Not at all"
+                    }
+                },
+                {
+                    "question": "How often do you seek support from others?",
+                    "options": {
+                        "A": "Always",
+                        "B": "Sometimes",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How do you feel after connecting with others?",
+                    "options": {
+                        "A": "Energized",
+                        "B": "Neutral",
+                        "C": "Tired",
+                        "D": "Drained"
+                    }
+                },
+                {
+                    "question": "How do you deal with anxiety?",
+                    "options": {
+                        "A": "I have strategies",
+                        "B": "I try to manage",
+                        "C": "I struggle",
+                        "D": "I avoid dealing"
+                    }
+                },
+                {
+                    "question": "How often do you reflect on your emotional well-being?",
+                    "options": {
+                        "A": "Regularly",
+                        "B": "Occasionally",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Mindfulness and Presence Quiz",
+            "summary": "Discover your mindfulness habits and ability to stay present. This quiz will reveal your strengths and areas to work on to enhance focus, relaxation, and mindful living.",
+            "answers": [
+                1,
+                0,
+                1,
+                2,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                2,
+                1
+            ],
+            "resultsTitle": [
+                "Excellent Mindfulness and Presence",
+                "Good Mindfulness and Presence",
+                "Fair Mindfulness and Presence",
+                "Poor Mindfulness and Presence",
+                "Very Poor Mindfulness and Presence",
+                "Critical Mindfulness Issues"
+            ],
+            "resultsDescription": [
+                "Your responses indicate excellent mindfulness and presence. You regularly practice mindfulness techniques and feel peaceful when in the moment. Keep up the great work!",
+                "You have good mindfulness practices. You engage in mindfulness and gratitude regularly but could enhance your focus and awareness during distractions.",
+                "You exhibit fair mindfulness and presence. While you practice occasionally, there are areas for improvement in deepening your mindfulness techniques.",
+                "Your responses suggest poor mindfulness practices. You may struggle with distractions and find it challenging to stay present. Consider incorporating more mindfulness activities.",
+                "You indicate very poor mindfulness and presence. Frequent distractions and lack of mindfulness practices may lead to increased anxiety. Seeking guidance could be beneficial.",
+                "Your responses reflect critical mindfulness issues. It’s crucial to address these challenges actively. Consider professional support or mindfulness training to improve your well-being."
+            ],
+            "questions": [
+                {
+                    "question": "How often do you practice mindfulness?",
+                    "options": {
+                        "A": "Daily",
+                        "B": "Weekly",
+                        "C": "Occasionally",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How do you feel when you are present in the moment?",
+                    "options": {
+                        "A": "Peaceful",
+                        "B": "Neutral",
+                        "C": "Anxious",
+                        "D": "Distracted"
+                    }
+                },
+                {
+                    "question": "How often do you notice your thoughts without judgment?",
+                    "options": {
+                        "A": "Regularly",
+                        "B": "Sometimes",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How do you respond to distractions?",
+                    "options": {
+                        "A": "Gently redirect focus",
+                        "B": "Get frustrated",
+                        "C": "Ignore them",
+                        "D": "I stop practicing"
+                    }
+                },
+                {
+                    "question": "How often do you engage in deep breathing?",
+                    "options": {
+                        "A": "Regularly",
+                        "B": "Occasionally",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How often do you practice gratitude?",
+                    "options": {
+                        "A": "Daily",
+                        "B": "Weekly",
+                        "C": "Occasionally",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How do you feel about multitasking?",
+                    "options": {
+                        "A": "I avoid it",
+                        "B": "I manage sometimes",
+                        "C": "I do it often",
+                        "D": "I find it stressful"
+                    }
+                },
+                {
+                    "question": "How often do you reflect on your experiences?",
+                    "options": {
+                        "A": "Regularly",
+                        "B": "Occasionally",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How do you feel about technology use?",
+                    "options": {
+                        "A": "I limit it",
+                        "B": "I manage it well",
+                        "C": "I struggle",
+                        "D": "I am always connected"
+                    }
+                },
+                {
+                    "question": "How often do you take breaks during the day?",
+                    "options": {
+                        "A": "Regularly",
+                        "B": "Occasionally",
+                        "C": "Rarely",
+                        "D": "Never"
+                    }
+                },
+                {
+                    "question": "How do you approach challenges in life?",
+                    "options": {
+                        "A": "With a positive mindset",
+                        "B": "With caution",
+                        "C": "With anxiety",
+                        "D": "I avoid them"
+                    }
+                }
+            ]
+        }
+    ]
+}

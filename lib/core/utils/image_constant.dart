@@ -36,6 +36,10 @@ class ImageConstant {
   static String imgHomeBG = '$imagePath/img_home_bg.png';
   static String imgSubtract = '$imagePath/img_subtract.svg';
   static String imgEpisodeBackground = '$imagePath/img_episode_background.png';
+  static String imgEpisodeBackgroundRelax =
+      '$imagePath/img_episode_background_relax.png';
+  static String imgEpisodeBackground2 =
+      '$imagePath/img_episode_background_2.png';
   static String imgSettingsLightBlue100 =
       '$imagePath/img_settings_light_blue_100.svg';
   static String imgSettingsLightBlue10050x50 =
@@ -56,12 +60,16 @@ class ImageConstant {
   static String imgImage6 = '$imagePath/img_image_6.png';
   static String imgImage7 = '$imagePath/img_image_7.png';
   static String imgNavRelax = '$imagePath/img_nav_relax.png';
+  static String imgRelaxingMusic = '$imagePath/img_relaxing_music.png';
 // Educational-Content images
   static String imgClose = '$imagePath/img_close.png';
   static String imgPlay = '$imagePath/img_play.png';
   static String imgImage152x324 = '$imagePath/img_image_152x324.png';
   static String imgImage1 = '$imagePath/img_image_1.png';
   static String imgImage2 = '$imagePath/img_image_2.png';
+  static String imgBooksIcon = '$imagePath/img_books_icon.png';
+  static String imgMeditationIcon = '$imagePath/img_meditation_icon.png';
+  static String imgCallIcon = '$imagePath/img_call_icon.png';
 // Practical Guides images
   static String imgUser = '$imagePath/img_user.png';
   static String imgImage3 = '$imagePath/img_image_3.png';
